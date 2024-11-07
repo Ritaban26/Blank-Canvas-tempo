@@ -10,25 +10,26 @@
     <header>
         <img src="/imgs/Signature.png" alt="Kuro" height="100" width="100">
         <h2>The Blank Canvas</h2>
+    
+        <nav>
+            <ul style="list-style: none; display: flex; gap: 15px;"> <!--styling for the list items in the form of a navbar -->
+                <li><a href="/pages/projects.html">Projects</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <li><a href="/pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    
     </header>
-
-    <nav>
-        <ul style="list-style: none; display: flex; gap: 15px;"> <!--styling for the list items in the form of a navbar -->
-            <li><a href="/pages/projects.html">Projects</a></li>
-            <li><a href="/pages/about.html">About</a></li>
-            <li><a href="/pages/contact.html">Contact</a></li>
-        </ul>
-    </nav>
 
     <hr />
 
     <main>
         <form>
             <label for="name">Name</label>
-            <input id="name" type="text">
+            <input id="name" type="text" required autocomplete="off">
         
             <label for="email">Email</label>
-            <input id="email" type="email">
+            <input id="email" type="email" required autocomplete="off" >
         
             <label for="message">Message</label>
             <textarea id="message" rows="10" cols="40"></textarea>
