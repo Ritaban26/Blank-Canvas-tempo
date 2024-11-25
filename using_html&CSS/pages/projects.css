@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----------- */
+
+body {
+    font-family: "Sour Gummy", sans-serif;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+a:hover {
+    color: red;
+}
+
+h2 {
+    font-size: 5rem;
+}
+
+p {
+    font-size: 1em;
+}
+
+header {
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.brand-content {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    font-size: 20px;
+    display: flex;
+    gap: 2em;
+    margin: 20px;
+}
+
+section {
+    max-width: 100%;
+    place-items: center;
+}
+
+.portraits,
+.landscapes {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 8em;
+    border: 3px solid blue;
+
+}
+
+footer {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    width: auto;
+    height: 40vh;
+}

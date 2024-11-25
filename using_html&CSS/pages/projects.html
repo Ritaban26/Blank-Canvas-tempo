@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="projects.css" />
     <!-- external styling sheet added -->
   </head>
   <body>
     <header>
       <div class="brand-content">
         <img src="/imgs/Signature.png" alt="Kuro" height="70" width="70" />
-        <h2>The Blank Canvas</h2>
+        <h1>The Blank Canvas</h1>
       </div>
 
       <nav>
@@ -25,11 +25,9 @@
 
     <hr />
 
-    <main></main>
-
-    <article>
-      <h2>Photography</h2>
-      <section>
+    <main>
+      <section class="photography">
+        <h2>Photography</h2>
         <div class="portraits">
           <img
             src="/imgs/portraits/cafe.jpg"
@@ -65,8 +63,9 @@
             height="300" />
         </div>
       </section>
-      <h2>Cinematography</h2>
-      <section>
+
+      <section class="cinematography">
+        <h2>Cinematography</h2>
         <video
           src="/vids/room.mp4"
           width="500"
@@ -77,13 +76,15 @@
           <p>footage of my room</p>
         </video>
       </section>
-    </article>
+    </main>
 
     <hr />
 
     <footer>
-      <h4>Connect with me</h4>
-      <a href="https://www.instagram.com/__calcifar__/">Instagram</a>
+      <div class="connect">
+        <h2>Follow</h2>
+        <a href="https://www.instagram.com/__calcifar__/">Instagram</a>
+      </div>
       <p>@2024 The Blank Canvas</p>
     </footer>
   </body>

@@ -12,28 +12,45 @@
 body {
   font-family: "Sour Gummy", sans-serif;
   letter-spacing: 1px;
-  /* background-image: url("/imgs/background\ image.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  width: 100%;
-  height: 100vh; */
 }
 
 a {
   text-decoration: none;
+  color: yellow;
+  font-size: 20px;
+}
+
+a:hover {
+  color: red;
+
+}
+
+h1 {
+  padding-top: 12px;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+p {
+  font-size: 1em;
 }
 
 section {
+  max-width: 100vw;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: grid;
   place-items: center;
-  text-align: center;
-  width: 100%;
-  height: 70vh;
   background-attachment: fixed;
   /*smooth scroll effect on backgorund */
 }
 
 header {
+  color: aliceblue;
   display: flex;
   padding: 15px;
   justify-content: space-between;
@@ -41,7 +58,6 @@ header {
 
 .brand-content {
   display: flex;
-  align-items: center;
 }
 
 ul {
@@ -57,5 +73,5 @@ footer {
   place-items: center;
   text-align: center;
   width: auto;
-  height: 55vh;
+  height: 40vh;
 }
