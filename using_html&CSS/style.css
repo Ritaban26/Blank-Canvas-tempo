@@ -43,10 +43,10 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  display: grid;
-  place-items: center;
   background-attachment: fixed;
   /*smooth scroll effect on backgorund */
+  display: grid;
+  place-items: center;
 }
 
 header {
