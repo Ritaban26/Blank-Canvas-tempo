@@ -52,14 +52,15 @@ ul {
 }
 
 section {
-    max-width: 100%;
+    max-width: 100vw;
     place-items: center;
 }
 
 .portraits,
 .landscapes {
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
+    width: 95vw;
     justify-content: center;
     gap: 8em;
     border: 3px solid blue;
