@@ -58,10 +58,11 @@ section {
 
 .portraits,
 .landscapes {
+    padding: 2em;
     display: flex;
     flex-wrap: wrap;
     width: 95vw;
-    justify-content: center;
+    justify-content: space-around;
     gap: 8em;
     border: 3px solid blue;
 
