@@ -125,7 +125,7 @@ nav {
 =============================================*/
 
 section {
-  width: auto;
+  width: 100vw;
   height: 75vh;
   background-repeat: no-repeat;
   background-size: cover;
