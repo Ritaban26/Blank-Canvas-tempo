@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
+
+/*=============================================
+=            Style            =
+=============================================*/
+:root {
+    --primary: #f4f4f4;
+    --secondary: #333;
+    --text: #444;
+}
+
+/*=====  End of Style  ======*/
+
+
+/*=============================================
+=            Rest            =
+=============================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Alegreya", serif;
+    letter-spacing: 1px;
+}
+
+/*=====  End of Rest  ======*/
+
+
+/*=============================================
+=            Header            =
+=============================================*/
+
+#main-header {
+    color: var(--secondary);
+    padding: 2em 5em;
+}
+
+.header-content,
+.brand-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*=============================================
+=            Menu Items            =
+=============================================*/
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-button {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-button span {
+    width: 25px;
+    height: 5px;
+    background-color: var(--secondary);
+}
+
+.menu {
+    display: none;
+    list-style: none;
+    flex-direction: column;
+    background-color: #444;
+    position: absolute;
+    top: 5.5em;
+    right: 5em;
+    padding: 50px;
+    border-radius: 10px;
+    line-height: 2em;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.menu.active {
+    display: flex;
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+    #main-header {
+        padding: 1.5em 2em;
+    }
+
+    .brand-content h1 {
+        display: none;
+    }
+
+    .menu {
+        position: absolute;
+        top: 5em;
+        right: 2em;
+    }
+}
+
+/*=====  End of Menu Items  ======*/
+
+/*=====  End of Header  ======*/
+
+
+/*=============================================
+=            Contact Form            =
+=============================================*/
+
+.two-column-grid {
+    padding: 4em 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    place-items: center;
+
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        width: 80%;
+        height: auto;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        justify-content: space-around;
+
+        .button {
+            background-color: var(--secondary);
+            color: var(--primary);
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+    .two-column-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*=====  End of Contact Form  ======*/
+
+
+
+/*=============================================
+=            Footer            =
+=============================================*/
+
+footer {
+    background-color: whitesmoke;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    width: auto;
+    height: 65vh;
+}
+
+/* Resize the image icon */
+.icon-link {
+    width: 4em;
+    height: 4em;
+    gap: 5em;
+}
+
+/* Optional: Add hover effects */
+.icon-link:hover {
+    filter: brightness(1.2);
+    /* Slightly brighten the icon */
+    transform: scale(1.1);
+    /* Scale up slightly */
+    transition: transform 0.3s, filter 0.3s;
+    /* Smooth animation */
+}
+
+/*=====  End of Footer  ======*/

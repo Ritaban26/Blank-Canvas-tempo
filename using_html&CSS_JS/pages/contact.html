@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact</title>
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="contact.css" />
   <!-- external styling sheet added -->
 </head>
 
@@ -13,46 +13,59 @@
   <header id="main-header" class="header">
     <div class="header-content">
       <div class="brand-content">
-        <img src="/imgs/Signature.png" alt="Kuro" height="70" width="70" />
+        <img src="/imgs/Signature.webp" alt="Kuro" height="70" width="70" />
         <h1>The Blank Canvas</h1>
       </div>
-
-      <div id="menu" class="menu">
-        <nav>
-          <ul>
-            <li><a href="/pages/projects.html">Projects</a></li>
-            <li><a href="/pages/about.html">About</a></li>
-            <li><a href="/pages/contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav>
+        <div class="menu-button" id="menuButton">
+          <span></span>
+          <span></span>
+        </div>
+        <ul id="menu" class="menu">
+          <li><a href="">Home</a></li>
+          <li><a href="/pages/projects.html">Projects</a></li>
+          <li><a href="/pages/about.html">About</a></li>
+          <li><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <hr />
-
   <main>
-    <form>
-      <label for="name">Name</label>
-      <input id="name" type="text" required autocomplete="off" />
+    <section class="two-column-grid">
+      <div class="image-container">
+        <h2>Contact</h2>
+        <img src="/imgs/contact.webp" alt="">
+      </div>
+      <form>
 
-      <label for="email">Email</label>
-      <input id="email" type="email" required autocomplete="off" />
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Enter your name" required autocomplete="off" />
 
-      <label for="message">Message</label>
-      <textarea id="message" rows="10" cols="40"></textarea>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Enter email" required autocomplete="off" />
 
-      <button>Submit</button>
-    </form>
+        <label for="message">Message</label>
+        <textarea id="message" rows="10" cols="40"></textarea>
+
+        <button class="button">Submit</button>
+      </form>
+    </section>
+
   </main>
 
-  <hr />
-
   <footer>
-    <h4>Connect with me</h4>
-    <a href="https://www.instagram.com/__calcifar__/">Instagram</a>
+    <div class="connect">
+      <h2>Connect with me</h2>
+      <a href="https://github.com/__calcifar__"><img class="icon-link" src="/imgs/Icons/git.webp" alt="Github link"></a>
+      <a href="https://www.instagram.com/__calcifar__/"><img class="icon-link" src="/imgs/Icons/linkedin.webp"
+          alt="Linkedin link"></a>
+      <a href="https://www.instagram.com/__calcifar__/"><img class="icon-link" src="/imgs/Icons/instagram.webp"
+          alt="Instagram link"></a>
+    </div>
     <p>@2024 The Blank Canvas</p>
   </footer>
+  <script src="/index.js"></script>
 </body>
 
 </html>

@@ -43,7 +43,7 @@ p {
 
 #main-header {
   color: var(--secondary);
-  padding: 2em 5em;
+  padding: 2em 8em;
 }
 
 .header-content,
@@ -91,7 +91,7 @@ nav {
 
 .menu li a {
   text-decoration: none;
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .menu.active {
@@ -115,6 +115,51 @@ nav {
   }
 }
 
+
+/*=============================================
+=            Side nav bar            =
+=============================================*/
+
+/* Sidebar */
+.sidebar {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: fixed;
+  top: 25%;
+  left: 0;
+  width: 5em;
+  height: 60vh;
+  background-color: rgba(44, 62, 80, 0.7);
+  /* Semi-transparent background */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+  img {
+    width: 3em;
+    height: 3em;
+  }
+
+  text-decoration: none;
+  /* color: #ecf0f1; */
+  font-size: 24px;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 800px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/*=====  End of Side nav bar  ======*/
+
+
 /*=====  End of Menu Items  ======*/
 
 /*=====  End of Header  ======*/
@@ -132,14 +177,45 @@ section {
   background-position: center;
   background-attachment: fixed;
   /*smooth scroll effect on backgorund */
-  padding: 0 5em;
+  display: flex;
+  justify-content: center;
+  /* Centers horizontally */
+  align-items: center;
+  /* Centers vertically */
   /* display: grid;
   place-items: center; */
-  object-fit: contain;
+}
+
+.intro,
+.collab,
+.prints {
+  /* border: 5px solid var(--primary); */
+  text-align: center;
+}
+
+.prints {
+  color: var(--primary);
+
+  a {
+
+    color: yellow;
+  }
+
+  a::after {
+    content: ' →';
+    /* Adds an arrow after the text */
+    font-size: 1em;
+    /* Adjust the size as needed */
+    color: inherit;
+    /* Ensures the arrow matches the text color */
+  }
 }
 
 @media (max-width: 800px) {
-  section {
+
+  .intro,
+  .collab,
+  .prints {
     padding: 0 2em;
   }
 }
@@ -150,7 +226,13 @@ section {
 =            Lightroom Preset            =
 =============================================*/
 
-
+/* .edit {
+  width: 90%;
+  height: 90%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center object-fit: cover;
+} */
 
 /*=====  End of Lightroom Preset  ======*/
 
@@ -174,7 +256,8 @@ footer {
 
 /* Resize the image icon */
 .icon-link {
-  width: 4em;
+  width: 3em;
+  aspect-ratio: 1/1;
   gap: 5em;
 }
 
