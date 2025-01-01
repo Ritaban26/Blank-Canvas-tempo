@@ -13,33 +13,49 @@
   <header id="main-header" class="header">
     <div class="header-content">
       <div class="brand-content">
-        <img src="/imgs/Signature.png" alt="Kuro" height="70" width="70" />
+        <img src="/imgs/Signature.webp" alt="Kuro" height="70" width="70" />
         <h1>The Blank Canvas</h1>
       </div>
-
-      <div id="menu" class="menu">
-        <nav>
-          <ul>
-            <li><a href="/pages/projects.html">Projects</a></li>
-            <li><a href="/pages/about.html">About</a></li>
-            <li><a href="/pages/contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav>
+        <div class="menu-button" id="menuButton">
+          <span></span>
+          <span></span>
+        </div>
+        <ul id="menu" class="menu">
+          <li><a href="">Home</a></li>
+          <li><a href="/pages/about.html">About</a></li>
+          <li><a href="/pages/projects.html">Projects</a></li>
+          <li><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <hr />
+  <div class="sidebar">
+    <a href="#home" class="nav-item"><i class="icon"><img src="/imgs/Icons/home/icons8-home-cloud-310.png"
+          alt="home"></i></a>
+    <a href="/pages/about.html" class="nav-item"><i class="icon"><img src="/imgs/Icons/user/icons8-user-cloud-70.png"
+          alt="about me"></i></a>
+    <a href="/pages/projects.html" class="nav-item"><i class="icon"><img
+          src="/imgs/Icons/folder/icons8-folder-cloud-310.png" alt="projects"></i></a>
+    <a href="/pages/contact.html" class="nav-item"><i class="icon"><img
+          src="/imgs/Icons/contact/icons8-contact-cloud-70.png" alt="contact me"></i></a>
+  </div>
 
   <main></main>
 
-  <hr />
-
   <footer>
-    <h4>Connect with me</h4>
-    <a href="https://www.instagram.com/__calcifar__/">Instagram</a>
+    <div class="connect">
+      <h2>Follow</h2>
+      <a href="https://github.com/__calcifar__"><img class="icon-link" src="/imgs/Icons/git.webp" alt="Github link"></a>
+      <a href="https://www.instagram.com/__calcifar__/"><img class="icon-link" src="/imgs/Icons/linkedin.webp"
+          alt="Linkedin link"></a>
+      <a href="https://www.instagram.com/__calcifar__/"><img class="icon-link" src="/imgs/Icons/instagram.webp"
+          alt="Instagram link"></a>
+    </div>
     <p>@2024 The Blank Canvas</p>
   </footer>
+  <script src="/index.js"></script>
 </body>
 
 </html>

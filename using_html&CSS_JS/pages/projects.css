@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
 
 /*=============================================
+=            Style            =
+=============================================*/
+:root {
+    --primary: #f4f4f4;
+    --secondary: #333;
+    --text: #444;
+}
+
+/*=====  End of Style  ======*/
+
+
+/*=============================================
 =            Rest            =
 =============================================*/
 
@@ -18,7 +30,7 @@ body {
 /*=====  End of Rest  ======*/
 
 h2 {
-    font-size: 5rem;
+    font-size: 3em;
 }
 
 p {
@@ -30,8 +42,8 @@ p {
 =============================================*/
 
 #main-header {
-    color: #444;
-    padding: 1em 5em;
+    color: var(--secondary);
+    padding: 2em 6em;
 }
 
 .header-content,
@@ -39,28 +51,25 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    img {
+        width: 5em;
+        aspect-ratio: 1/1;
+    }
 }
 
-ul {
-    list-style: none;
-    font-size: 20px;
-    display: flex;
-    gap: 2em;
-    margin: 20px;
-}
-
+/*=============================================
+=            Menu Items            =
+=============================================*/
 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
 }
 
 .menu-button {
-    display: none;
+    display: flex;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
@@ -68,54 +77,116 @@ nav {
 
 .menu-button span {
     width: 25px;
-    height: 3px;
-    background-color: white;
+    height: 5px;
+    background-color: var(--secondary);
 }
 
 .menu {
+    display: none;
     list-style: none;
-    display: flex;
-    gap: 20px;
+    flex-direction: column;
+    background-color: #444;
+    position: absolute;
+    top: 5.5em;
+    right: 5em;
+    padding: 50px;
+    border-radius: 10px;
+    line-height: 2em;
 }
 
 .menu li a {
     text-decoration: none;
-    color: white;
-    font-size: 16px;
+    color: var(--primary);
+}
+
+.menu.active {
+    display: flex;
 }
 
 /* Responsive styles */
 @media (max-width: 800px) {
-
     #main-header {
-        padding: 1em 2em;
+        padding: 1.5em 2em;
     }
 
-    .brand-content>h1 {
+    .brand-content h1 {
         display: none;
     }
 
     .menu {
-        display: none;
-        flex-direction: column;
-        background-color: #444;
         position: absolute;
-        top: 50px;
-        right: 20px;
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    .menu-button {
-        display: flex;
+        top: 5em;
+        right: 2em;
     }
 }
 
+
+/*=============================================
+=            Side nav bar            =
+=============================================*/
+
+/* Sidebar */
+.sidebar {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: fixed;
+    top: 23%;
+    left: 0;
+    width: 5em;
+    height: 60vh;
+    background-color: rgba(44, 62, 80, 0.7);
+    /* Semi-transparent background */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+    text-decoration: none;
+    font-size: 24px;
+    margin: 15px 0;
+    transition: color 0.3s ease;
+
+    img {
+        width: 3em;
+        height: 3em;
+    }
+}
+
+@media (max-width: 800px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+/*=====  End of Side nav bar  ======*/
+
+
+/*=====  End of Menu Items  ======*/
+
 /*=====  End of Header  ======*/
+
+
+/*=============================================
+=            Headshots            =
+=============================================*/
+
+.headshots {
+    background-color: #35323270;
+    padding: 1em;
+    width: 90vw;
+    height: 50vh;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*=====  End of Headshots  ======*/
+
+
 
 /*=============================================
 =            Footer            =
@@ -127,6 +198,29 @@ footer {
     text-align: center;
     width: auto;
     height: 65vh;
+}
+
+.connect>a {
+    text-decoration: none;
+    color: #333;
+    white-space: inherit;
+}
+
+/* Resize the image icon */
+.icon-link {
+    width: 3em;
+    aspect-ratio: 1/1;
+    gap: 5em;
+}
+
+/* Optional: Add hover effects */
+.icon-link:hover {
+    filter: brightness(1.2);
+    /* Slightly brighten the icon */
+    transform: scale(1.1);
+    /* Scale up slightly */
+    transition: transform 0.3s, filter 0.3s;
+    /* Smooth animation */
 }
 
 /*=====  End of Footer  ======*/

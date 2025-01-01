@@ -43,7 +43,7 @@ p {
 
 #main-header {
   color: var(--secondary);
-  padding: 2em 8em;
+  padding: 2em 6em;
 }
 
 .header-content,
@@ -53,7 +53,7 @@ p {
   align-items: center;
 
   img {
-    width: 6em;
+    width: 5em;
     aspect-ratio: 1/1;
   }
 }
@@ -130,7 +130,7 @@ nav {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   position: fixed;
-  top: 25%;
+  top: 23%;
   left: 0;
   width: 5em;
   height: 60vh;
@@ -144,16 +144,15 @@ nav {
 }
 
 .nav-item {
+  text-decoration: none;
+  font-size: 24px;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+
   img {
     width: 3em;
     height: 3em;
   }
-
-  text-decoration: none;
-  /* color: #ecf0f1; */
-  font-size: 24px;
-  margin: 15px 0;
-  transition: color 0.3s ease;
 }
 
 @media (max-width: 800px) {
@@ -193,7 +192,8 @@ section {
 
 .intro,
 .collab,
-.prints {
+.prints,
+.original {
   /* border: 5px solid var(--primary); */
   text-align: center;
 }
