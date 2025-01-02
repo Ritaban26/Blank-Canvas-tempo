@@ -228,11 +228,31 @@ nav {
     background-color: #35323270;
     padding: 1em;
     width: 90%;
-    height: 50vh;
+    height: auto;
     margin: auto;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 1em;
+}
+
+.picture-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+.picture-card img {
+    display: block;
+    /* Prevents inline spacing issues */
+    width: 400px;
+    /* Allows the image to scale */
+    height: auto;
+    /* Maintains aspect ratio */
 }
 
 /*=====  End of Headshots  ======*/
