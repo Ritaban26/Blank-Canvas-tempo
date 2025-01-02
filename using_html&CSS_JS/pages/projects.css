@@ -170,13 +170,64 @@ nav {
 
 
 /*=============================================
+=            Photography            =
+=============================================*/
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, auto));
+    gap: 1em;
+    padding: 1em;
+    width: 98%;
+    margin: auto;
+}
+
+.item-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: calc(150px + (100px * var(--random-height, 1)));
+    display: inline-block;
+}
+
+.item-card img {
+    width: 100%;
+    /* Makes the image fit the width of the card */
+    height: 100%;
+    /* Makes the image stretch to fit the height of the card */
+    object-fit: cover;
+    /* Ensures the image maintains aspect ratio and fills the card */
+    display: block;
+}
+
+.item-card:nth-child(odd) {
+    --random-height: 1.5;
+}
+
+.item-card:nth-child(even) {
+    --random-height: 1;
+}
+
+@media (max-width: 768px) {
+    .photo-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(177px, 1fr));
+        /* Restrict to 2 columns */
+    }
+}
+
+/*=====  End of Photography  ======*/
+
+
+/*=============================================
 =            Headshots            =
 =============================================*/
 
-.headshots {
+#headshots {
     background-color: #35323270;
     padding: 1em;
-    width: 90vw;
+    width: 90%;
     height: 50vh;
     margin: auto;
     display: flex;
