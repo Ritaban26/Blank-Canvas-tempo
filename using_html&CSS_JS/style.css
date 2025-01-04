@@ -46,16 +46,19 @@ p {
   padding: 2em 6em;
 }
 
-.header-content,
-.brand-content {
+.header-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
   img {
-    width: 5em;
-    aspect-ratio: 1/1;
+    width: 7%;
+    height: auto;
   }
+}
+
+.brand-content {
+  display: flex;
+  align-items: center;
 }
 
 /*=============================================
@@ -107,6 +110,13 @@ nav {
 @media (max-width: 800px) {
   #main-header {
     padding: 1.5em 2em;
+  }
+
+  .header-content {
+    img {
+      width: 20%;
+      height: auto;
+    }
   }
 
   .brand-content h1 {

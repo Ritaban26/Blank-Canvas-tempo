@@ -182,7 +182,7 @@ nav {
 
 .item-card {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 1em;
 }
 
 .item-card img {
@@ -215,33 +215,37 @@ nav {
 
 #headshots {
     background-color: #35323270;
-    padding: 2em 1em;
+    padding: 1em 1em;
     width: 90%;
     height: auto;
     margin: auto;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 1em;
+    columns: 4;
+    column-gap: 1em;
 }
 
 .picture-card {
+    margin-bottom: 1em;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: inline-block;
+
 }
 
 .picture-card img {
     display: block;
     /* Prevents inline spacing issues */
-    width: 400px;
+    width: 100%;
     /* Allows the image to scale */
     height: auto;
     /* Maintains aspect ratio */
+}
+
+@media (max-width: 800px) {
+    #headshots {
+        columns: 1;
+    }
 }
 
 /*=====  End of Headshots  ======*/
