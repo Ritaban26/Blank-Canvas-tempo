@@ -1,34 +1,42 @@
+/* Import Alegreya font family with various weights and styles */
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
 
 /*=============================================
-=            Style            =
+=            CSS Variables            =
 =============================================*/
 :root {
+    /* Color scheme */
     --primary: #f4f4f4;
+    /* Light background color */
     --secondary: #333;
+    /* Dark text color */
     --text: #444;
+    /* Medium text color */
+
+    /* Component specific variables */
+    --sidebar-bg: rgba(44, 62, 80, 0.7);
+    /* Semi-transparent sidebar background */
+    --transition: 0.3s ease;
+    /* Standard transition timing */
 }
 
-/*=====  End of Style  ======*/
-
-
 /*=============================================
-=            Rest            =
+=            Base Styles            =
 =============================================*/
-
+/* Reset default browser styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Global typography settings */
 body {
     font-family: "Alegreya", serif;
     letter-spacing: 1px;
 }
 
-/*=====  End of Rest  ======*/
-
+/* Typography scale */
 h2 {
     font-size: 3em;
 }
@@ -38,36 +46,40 @@ p {
 }
 
 /*=============================================
-=            Header            =
+=            Header Styles            =
 =============================================*/
-
+/* Main header container */
 #main-header {
     color: var(--secondary);
     padding: 2em 6em;
 }
 
+/* Flex container for header content and brand */
 .header-content,
 .brand-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
 
-    img {
-        width: 5em;
-        aspect-ratio: 1/1;
-    }
+/* Header and brand images */
+.header-content img,
+.brand-content img {
+    width: 5em;
+    aspect-ratio: 1/1;
 }
 
 /*=============================================
-=            Menu Items            =
+=            Navigation Styles            =
 =============================================*/
-
+/* Main navigation container */
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* Hamburger menu button */
 .menu-button {
     display: flex;
     flex-direction: column;
@@ -75,17 +87,19 @@ nav {
     gap: 5px;
 }
 
+/* Hamburger menu lines */
 .menu-button span {
     width: 25px;
     height: 5px;
     background-color: var(--secondary);
 }
 
+/* Dropdown menu */
 .menu {
     display: none;
     list-style: none;
     flex-direction: column;
-    background-color: #444;
+    background-color: var(--text);
     position: absolute;
     top: 5.5em;
     right: 5em;
@@ -94,114 +108,106 @@ nav {
     line-height: 2em;
 }
 
+/* Menu links */
 .menu li a {
     text-decoration: none;
     color: var(--primary);
 }
 
+/* Active menu state */
 .menu.active {
     display: flex;
 }
 
-/* Responsive styles */
-@media (max-width: 800px) {
-    #main-header {
-        padding: 1.5em 2em;
-    }
-
-    .brand-content h1 {
-        display: none;
-    }
-
-    .menu {
-        position: absolute;
-        top: 5em;
-        right: 2em;
-    }
-}
-
-
 /*=============================================
-=            Side nav bar            =
+=            Sidebar Styles            =
 =============================================*/
-
-/* Sidebar */
+/* Fixed sidebar container */
 .sidebar {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
     position: fixed;
     top: 23%;
     left: 0;
     width: 5em;
     height: 60vh;
-    background-color: rgba(44, 62, 80, 0.7);
-    /* Semi-transparent background */
+    background-color: var(--sidebar-bg);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    border-radius: 0 10px 10px 0;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Sidebar navigation items */
 .nav-item {
     text-decoration: none;
     font-size: 24px;
     margin: 15px 0;
-    transition: color 0.3s ease;
-
-    img {
-        width: 3em;
-        height: 3em;
-    }
+    transition: color var(--transition);
 }
 
-@media (max-width: 800px) {
-    .sidebar {
-        display: none;
-    }
+/* Sidebar icons */
+.nav-item img {
+    width: 3em;
+    height: 3em;
 }
-
-/*=====  End of Side nav bar  ======*/
-
-
-/*=====  End of Menu Items  ======*/
-
-/*=====  End of Header  ======*/
-
 
 /*=============================================
-=            Footer            =
+=            Footer Styles            =
 =============================================*/
-
+/* Main footer container */
 footer {
     display: grid;
     place-items: center;
     text-align: center;
-    width: auto;
     height: 65vh;
 }
 
+/* Footer link styles */
 .connect>a {
     text-decoration: none;
-    color: #333;
+    color: var(--secondary);
     white-space: inherit;
 }
 
-/* Resize the image icon */
+/* Social media icons */
 .icon-link {
     width: 3em;
     aspect-ratio: 1/1;
     gap: 5em;
+    transition: transform var(--transition), filter var(--transition);
 }
 
-/* Optional: Add hover effects */
+/* Icon hover effects */
 .icon-link:hover {
     filter: brightness(1.2);
-    /* Slightly brighten the icon */
     transform: scale(1.1);
-    /* Scale up slightly */
-    transition: transform 0.3s, filter 0.3s;
-    /* Smooth animation */
 }
 
-/*=====  End of Footer  ======*/
+/*=============================================
+=            Responsive Design            =
+=============================================*/
+/* Mobile and tablet styles */
+@media (max-width: 800px) {
+
+    /* Adjust header padding for smaller screens */
+    #main-header {
+        padding: 1.5em 2em;
+    }
+
+    /* Hide brand text on mobile */
+    .brand-content h1 {
+        display: none;
+    }
+
+    /* Reposition menu dropdown */
+    .menu {
+        top: 5em;
+        right: 2em;
+    }
+
+    /* Hide sidebar on mobile */
+    .sidebar {
+        display: none;
+    }
+}

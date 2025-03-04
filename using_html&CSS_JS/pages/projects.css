@@ -2,8 +2,12 @@
 @import '../shared.css';
 
 /*=============================================
-=            Photography Gallery            =
+=            Section Styles            =
 =============================================*/
+section {
+    padding: 4em 0;
+    margin: 2em 0;
+}
 
 /* Main gallery container with masonry layout */
 .photo-gallery {

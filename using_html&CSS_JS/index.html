@@ -4,23 +4,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="The Blank Canvas - A creative portfolio showcasing photography, films, and web development" />
   <title>The Blank Canvas</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/webp" href="/imgs/Signature.webp" />
   <!-- external styling sheet added -->
 </head>
 
 <body>
-  <header id="main-header" class="header" style="
-        background-image: url(/imgs/profile.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        width: 100vw;
-        height: 100vh;
-      ">
+  <header id="main-header" class="header">
     <div class="header-content">
       <div class="brand-content">
-        <img src="/imgs/Signature.webp" alt="Kuro" />
+        <img src="/imgs/Signature.webp" alt="The Blank Canvas Logo" width="150" height="50" />
         <h1>The Blank Canvas</h1>
       </div>
       <nav>
@@ -29,7 +25,7 @@
           <span></span>
         </div>
         <ul id="menu" class="menu">
-          <li><a href="">Home</a></li>
+          <li><a href="/" aria-current="page">Home</a></li>
           <li><a href="/pages/about.html">About</a></li>
           <li><a href="/pages/projects.html">Projects</a></li>
           <li><a href="/pages/contact.html">Contact</a></li>
@@ -38,22 +34,22 @@
     </div>
   </header>
 
-  <div class="sidebar">
-    <a href="#home" class="nav-item"><i class="icon"><img src="imgs/Icons/home/icons8-home-cloud-310.png"
-          alt="home"></i></a>
-    <a href="/pages/about.html" class="nav-item"><i class="icon"><img src="imgs/Icons/user/icons8-user-cloud-70.png"
-          alt="about me"></i></a>
-    <a href="/pages/projects.html" class="nav-item"><i class="icon"><img
-          src="imgs/Icons/folder/icons8-folder-cloud-310.png" alt="projects"></i></a>
-    <a href="/pages/contact.html" class="nav-item"><i class="icon"><img
-          src="imgs/Icons/contact/icons8-contact-cloud-70.png" alt="contact me"></i></a>
-  </div>
+  <nav class="sidebar" aria-label="Quick navigation">
+    <a href="#home" class="nav-item" aria-label="Home"><i class="icon"><img
+          src="imgs/Icons/home/icons8-home-cloud-310.png" alt=""></i></a>
+    <a href="/pages/about.html" class="nav-item" aria-label="About"><i class="icon"><img
+          src="imgs/Icons/user/icons8-user-cloud-70.png" alt=""></i></a>
+    <a href="/pages/projects.html" class="nav-item" aria-label="Projects"><i class="icon"><img
+          src="imgs/Icons/folder/icons8-folder-cloud-310.png" alt=""></i></a>
+    <a href="/pages/contact.html" class="nav-item" aria-label="Contact"><i class="icon"><img
+          src="imgs/Icons/contact/icons8-contact-cloud-70.png" alt=""></i></a>
+  </nav>
 
   <main>
-    <section style="background-image: url(imgs/welcome.jpg)">
+    <section class="welcome-section" aria-label="Welcome">
       <div class="intro">
-        <h2>welcome</h2>
-        <p>what i like photos films webdev</p>
+        <h2>Welcome</h2>
+        <p>Photography • Films • Web Development</p>
       </div>
     </section>
     <!-- <section style="background-image: url(imgs/_DSC0040.webp)">
@@ -61,16 +57,16 @@
         <p>lets work together</p>
       </div>
     </section> -->
-    <section style="background-image: url(/imgs/prints.webp);">
+    <section class="prints-section" aria-label="Limited edition prints">
       <div class="prints">
-        <h2>Limited edition prints</h2>
-        <a href="">Shop Now</a>
+        <h2>Limited Edition Prints</h2>
+        <a href="/shop/prints" class="cta-button">Shop Now</a>
       </div>
     </section>
-    <section id="lightroom-presets" style="background-image: url(/imgs/original.webp);">
+    <section id="lightroom-presets" class="presets-section" aria-label="Lightroom presets">
       <div class="original">
-        <h2>Lightroom presets</h2>
-        <a href="">Shop Now</a>
+        <h2>Lightroom Presets</h2>
+        <a href="/shop/presets" class="cta-button">Shop Now</a>
       </div>
       <!-- <div class="edit">
         <img src="/imgs/edit.webp" alt="">
@@ -82,13 +78,16 @@
   <footer>
     <div class="connect">
       <h2>Follow</h2>
-      <a href="https://github.com/__calcifar__"><img class="icon-link" src="/imgs/Icons/git.webp" alt="Github link"></a>
-      <a href="https://www.instagram.com/__calcifar__/"><img class="icon-link" src="/imgs/Icons/linkedin.webp"
-          alt="Linkedin link"></a>
-      <a href="https://www.instagram.com/__calcifar__/"><img class="icon-link" src="/imgs/Icons/instagram.webp"
-          alt="Instagram link"></a>
+      <div class="social-links">
+        <a href="https://github.com/__calcifar__" aria-label="GitHub Profile"><img class="icon-link"
+            src="/imgs/Icons/git.webp" alt="GitHub" width="24" height="24"></a>
+        <a href="https://www.linkedin.com/in/__calcifar__" aria-label="LinkedIn Profile"><img class="icon-link"
+            src="/imgs/Icons/linkedin.webp" alt="LinkedIn" width="24" height="24"></a>
+        <a href="https://www.instagram.com/__calcifar__/" aria-label="Instagram Profile"><img class="icon-link"
+            src="/imgs/Icons/instagram.webp" alt="Instagram" width="24" height="24"></a>
+      </div>
     </div>
-    <p>@2024 The Blank Canvas</p>
+    <p>&copy; 2024 The Blank Canvas. All rights reserved.</p>
   </footer>
   <script src="index.js"></script>
 </body>
