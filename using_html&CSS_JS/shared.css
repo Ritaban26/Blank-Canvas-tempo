@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
+
+/*=============================================
+=            Style            =
+=============================================*/
+:root {
+    --primary: #f4f4f4;
+    --secondary: #333;
+    --text: #444;
+}
+
+/*=====  End of Style  ======*/
+
+
+/*=============================================
+=            Rest            =
+=============================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Alegreya", serif;
+    letter-spacing: 1px;
+}
+
+/*=====  End of Rest  ======*/
+
+h2 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1em;
+}
+
+/*=============================================
+=            Header            =
+=============================================*/
+
+#main-header {
+    color: var(--secondary);
+    padding: 2em 6em;
+}
+
+.header-content,
+.brand-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        width: 5em;
+        aspect-ratio: 1/1;
+    }
+}
+
+/*=============================================
+=            Menu Items            =
+=============================================*/
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-button {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-button span {
+    width: 25px;
+    height: 5px;
+    background-color: var(--secondary);
+}
+
+.menu {
+    display: none;
+    list-style: none;
+    flex-direction: column;
+    background-color: #444;
+    position: absolute;
+    top: 5.5em;
+    right: 5em;
+    padding: 50px;
+    border-radius: 10px;
+    line-height: 2em;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.menu.active {
+    display: flex;
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+    #main-header {
+        padding: 1.5em 2em;
+    }
+
+    .brand-content h1 {
+        display: none;
+    }
+
+    .menu {
+        position: absolute;
+        top: 5em;
+        right: 2em;
+    }
+}
+
+
+/*=============================================
+=            Side nav bar            =
+=============================================*/
+
+/* Sidebar */
+.sidebar {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: fixed;
+    top: 23%;
+    left: 0;
+    width: 5em;
+    height: 60vh;
+    background-color: rgba(44, 62, 80, 0.7);
+    /* Semi-transparent background */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+    text-decoration: none;
+    font-size: 24px;
+    margin: 15px 0;
+    transition: color 0.3s ease;
+
+    img {
+        width: 3em;
+        height: 3em;
+    }
+}
+
+@media (max-width: 800px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+/*=====  End of Side nav bar  ======*/
+
+
+/*=====  End of Menu Items  ======*/
+
+/*=====  End of Header  ======*/
+
+
+/*=============================================
+=            Footer            =
+=============================================*/
+
+footer {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    width: auto;
+    height: 65vh;
+}
+
+.connect>a {
+    text-decoration: none;
+    color: #333;
+    white-space: inherit;
+}
+
+/* Resize the image icon */
+.icon-link {
+    width: 3em;
+    aspect-ratio: 1/1;
+    gap: 5em;
+}
+
+/* Optional: Add hover effects */
+.icon-link:hover {
+    filter: brightness(1.2);
+    /* Slightly brighten the icon */
+    transform: scale(1.1);
+    /* Scale up slightly */
+    transition: transform 0.3s, filter 0.3s;
+    /* Smooth animation */
+}
+
+/*=====  End of Footer  ======*/

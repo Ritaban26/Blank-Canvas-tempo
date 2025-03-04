@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact</title>
+  <meta name="description" content="Contact The Blank Canvas - Get in touch with us" />
+  <meta name="keywords" content="contact, get in touch, The Blank Canvas" />
+  <title>Contact - The Blank Canvas</title>
   <link rel="stylesheet" href="contact.css" />
   <!-- external styling sheet added -->
 </head>
@@ -22,7 +24,7 @@
           <span></span>
         </div>
         <ul id="menu" class="menu">
-          <li><a href="">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="/pages/about.html">About</a></li>
           <li><a href="/pages/projects.html">Projects</a></li>
           <li><a href="/pages/contact.html">Contact</a></li>
@@ -46,9 +48,9 @@
     <section class="two-column-grid">
       <div class="image-container">
         <h2>Contact</h2>
-        <img src="/imgs/contact.webp" alt="">
+        <img src="/imgs/contact.webp" alt="Contact form illustration" loading="lazy">
       </div>
-      <form>
+      <form action="/submit" method="POST" id="contactForm">
 
         <label for="name">Name</label>
         <input id="name" type="text" placeholder="Enter your name" required autocomplete="off" />
@@ -68,11 +70,15 @@
   <footer>
     <div class="connect">
       <h2>Follow</h2>
-      <a href="https://github.com/__calcifar__"><img class="icon-link" src="/imgs/Icons/git.webp" alt="Github link"></a>
-      <a href="https://www.instagram.com/__calcifar__/"><img class="icon-link" src="/imgs/Icons/linkedin.webp"
-          alt="Linkedin link"></a>
-      <a href="https://www.instagram.com/__calcifar__/"><img class="icon-link" src="/imgs/Icons/instagram.webp"
-          alt="Instagram link"></a>
+      <a href="https://github.com/__calcifar__" target="_blank" rel="noopener noreferrer">
+        <img class="icon-link" src="/imgs/Icons/git.webp" alt="Github profile" loading="lazy">
+      </a>
+      <a href="https://www.linkedin.com/in/__calcifar__" target="_blank" rel="noopener noreferrer">
+        <img class="icon-link" src="/imgs/Icons/linkedin.webp" alt="LinkedIn profile" loading="lazy">
+      </a>
+      <a href="https://www.instagram.com/__calcifar__/" target="_blank" rel="noopener noreferrer">
+        <img class="icon-link" src="/imgs/Icons/instagram.webp" alt="Instagram profile" loading="lazy">
+      </a>
     </div>
     <p>@2024 The Blank Canvas</p>
   </footer>
