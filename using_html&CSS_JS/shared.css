@@ -85,13 +85,35 @@ nav {
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
+    position: relative;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all var(--transition);
+}
+
+.menu-button:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Hamburger menu lines */
 .menu-button span {
     width: 25px;
-    height: 5px;
+    height: 3px;
     background-color: var(--secondary);
+    border-radius: 3px;
+    transition: all var(--transition);
+}
+
+.menu-button.active span:first-child {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-button.active span:last-child {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Dropdown menu */
@@ -99,24 +121,74 @@ nav {
     display: none;
     list-style: none;
     flex-direction: column;
-    background-color: var(--text);
-    position: absolute;
-    top: 5.5em;
-    right: 5em;
-    padding: 50px;
-    border-radius: 10px;
-    line-height: 2em;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    padding: 80px 40px;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform var(--transition);
 }
 
 /* Menu links */
+.menu li {
+    margin: 15px 0;
+}
+
 .menu li a {
     text-decoration: none;
     color: var(--primary);
+    font-size: 1.2rem;
+    position: relative;
+    padding: 5px 0;
+}
+
+.menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width var(--transition);
+}
+
+.menu li a:hover::after {
+    width: 100%;
+}
+
+.menu li a[aria-current="page"] {
+    color: #3498db;
 }
 
 /* Active menu state */
 .menu.active {
     display: flex;
+    transform: translateX(0);
+}
+
+/* Overlay when menu is active */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.menu-overlay.active {
+    display: block;
+    opacity: 1;
 }
 
 /*=============================================
