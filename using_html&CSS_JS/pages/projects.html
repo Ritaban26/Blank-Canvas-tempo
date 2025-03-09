@@ -63,7 +63,7 @@
           </div>
         </div>
         <div class="item-card">
-          <img src="/imgs/landscape/headshot3.webp" alt="Mountain Landscape" loading="lazy">
+          <img src="/imgs/landscape/" alt="Mountain Landscape" loading="lazy">
           <div class="card-overlay">
             <h3>Mountain View</h3>
             <p>Landscape Photography</p>
@@ -124,8 +124,10 @@
     <!-- Cinematography Section -->
     <section class="cinematography" aria-labelledby="cinematography-title">
       <h2 id="cinematography-title">Cinematography</h2>
-      <div class="video-gallery">
-        <div class="video-container">
+
+      <!-- Spotlight Video -->
+      <div class="video-spotlight">
+        <div class="featured-video">
           <iframe src="https://www.youtube.com/embed/HAZwkR0aPyc?si=pMFbZ2CZe53JxasA" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -136,14 +138,37 @@
             <p>A journey through visual storytelling</p>
           </div>
         </div>
-        <div class="video-container">
-          <video src="/vids/room.mp4" controls autoplay loop preload="metadata" aria-label="Room footage">
-            <p>Your browser doesn't support HTML5 video. Here's a <a href="/vids/room.mp4">link to the video</a>
-              instead.</p>
+      </div>
+
+      <!-- Video List -->
+      <div class="video-list">
+        <div class="video-item" data-video="room">
+          <video src="/vids/room.mp4" controls preload="metadata" aria-label="Room footage">
+            <p>Your browser doesn't support HTML5 video.</p>
           </video>
-          <div class="video-description">
-            <h3>Room Ambience</h3>
+          <div class="video-info">
+            <h4>Room Ambience</h4>
             <p>A cinematic exploration of space and light</p>
+          </div>
+        </div>
+
+        <!-- Placeholder videos -->
+        <div class="video-item placeholder">
+          <div class="placeholder-content">
+            <i class="fas fa-film"></i>
+            <p>Coming Soon</p>
+          </div>
+        </div>
+        <div class="video-item placeholder">
+          <div class="placeholder-content">
+            <i class="fas fa-film"></i>
+            <p>Coming Soon</p>
+          </div>
+        </div>
+        <div class="video-item placeholder">
+          <div class="placeholder-content">
+            <i class="fas fa-film"></i>
+            <p>Coming Soon</p>
           </div>
         </div>
       </div>
@@ -153,7 +178,7 @@
     <section id="headshots">
       <div class="headshots-gallery">
         <div class="picture-card">
-          <img src="/imgs/portraits/headshot4.webp" alt="Professional headshot" loading="lazy">
+          <img src="/imgs/portraits/me.webp" alt="Professional headshot" loading="lazy">
           <div class="card-overlay">
             <h3>Professional Portrait</h3>
             <p>Corporate Headshot</p>
@@ -189,15 +214,12 @@
     <div class="connect">
       <h2>Follow</h2>
       <div class="social-links">
-        <a href="https://github.com/__calcifar__" aria-label="Visit our GitHub profile">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.instagram.com/__calcifar__/" aria-label="Visit our LinkedIn profile">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://www.instagram.com/__calcifar__/" aria-label="Visit our Instagram profile">
-          <i class="fab fa-instagram"></i>
-        </a>
+        <a href="https://github.com/__calcifar__" aria-label="GitHub Profile"><img class="icon-link"
+            src="/imgs/Icons/git.webp" alt="GitHub" width="24" height="24"></a>
+        <a href="https://www.linkedin.com/in/__calcifar__" aria-label="LinkedIn Profile"><img class="icon-link"
+            src="/imgs/Icons/linkedin.webp" alt="LinkedIn" width="24" height="24"></a>
+        <a href="https://www.instagram.com/__calcifar__/" aria-label="Instagram Profile"><img class="icon-link"
+            src="/imgs/Icons/instagram.webp" alt="Instagram" width="24" height="24"></a>
       </div>
     </div>
     <p>&copy; 2024 The Blank Canvas. All rights reserved.</p>

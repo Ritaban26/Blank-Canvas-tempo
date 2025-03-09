@@ -15,7 +15,7 @@
     justify-content: center;
     text-align: center;
     color: white;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: calc(var(--spacing-lg) * 2);
 }
 
 .hero-content {
@@ -106,9 +106,8 @@
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-md);
+    column-count: 3;
+    column-gap: var(--spacing-md);
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -120,6 +119,10 @@
     box-shadow: var(--shadow-md);
     text-align: center;
     transition: transform var(--transition);
+    margin-bottom: var(--spacing-md);
+    break-inside: avoid;
+    display: inline-block;
+    width: 100%;
 }
 
 .skill-card:hover {
@@ -165,9 +168,8 @@
 }
 
 .equipment-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-md);
+    column-count: 3;
+    column-gap: var(--spacing-md);
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -178,6 +180,10 @@
     border-radius: var(--border-radius);
     backdrop-filter: blur(10px);
     transition: transform var(--transition);
+    margin-bottom: var(--spacing-md);
+    break-inside: avoid;
+    display: inline-block;
+    width: 100%;
 }
 
 .equipment-card:hover {
@@ -231,7 +237,7 @@
 
     .skills-grid,
     .equipment-grid {
-        grid-template-columns: repeat(2, 1fr);
+        column-count: 2;
     }
 }
 
@@ -259,7 +265,7 @@
 
     .skills-grid,
     .equipment-grid {
-        grid-template-columns: 1fr;
+        column-count: 1;
     }
 
     .profile-image::after {

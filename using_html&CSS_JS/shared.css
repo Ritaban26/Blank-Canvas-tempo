@@ -312,7 +312,8 @@ footer {
 
 /* Social media icons */
 .icon-link {
-    width: 3em;
+    width: 2em;
+    height: auto;
     aspect-ratio: 1/1;
     gap: 5em;
     transition: transform var(--transition), filter var(--transition);

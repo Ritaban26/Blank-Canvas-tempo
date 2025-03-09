@@ -35,3 +35,55 @@ document.addEventListener("DOMContentLoaded", function () {
     }, index * 100);
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const videoSpotlight = document.querySelector(".video-spotlight");
+  const videoItems = document.querySelectorAll(".video-item:not(.placeholder)");
+
+  // Store the initial featured video content
+  const initialFeaturedVideo =
+    videoSpotlight.querySelector(".featured-video").innerHTML;
+
+  // Set initial active state
+  const youtubeVideo = document.createElement("div");
+  youtubeVideo.className = "video-item active";
+  youtubeVideo.dataset.video = "youtube";
+
+  function updateActiveState(clickedItem) {
+    videoItems.forEach((item) => item.classList.remove("active"));
+    clickedItem.classList.add("active");
+  }
+
+  videoItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      const videoType = this.dataset.video;
+
+      // Update active state
+      updateActiveState(this);
+
+      if (videoType === "room") {
+        // Switch to room video in spotlight
+        videoSpotlight.querySelector(".featured-video").innerHTML = `
+                    <video src="/vids/room.mp4" controls autoplay preload="metadata" aria-label="Room footage">
+                        <p>Your browser doesn't support HTML5 video.</p>
+                    </video>
+                    <div class="video-description">
+                        <h3>Room Ambience</h3>
+                        <p>A cinematic exploration of space and light</p>
+                    </div>
+                `;
+      } else {
+        // Restore YouTube video if it's not the room video
+        videoSpotlight.querySelector(".featured-video").innerHTML =
+          initialFeaturedVideo;
+        updateActiveState(youtubeVideo);
+      }
+
+      // Smooth scroll to spotlight
+      videoSpotlight.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  });
+});
