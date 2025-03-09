@@ -4,25 +4,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About</title>
+  <meta name="description" content="Portfolio showcasing photography and cinematography projects" />
+  <title>Projects | The Blank Canvas</title>
   <link rel="stylesheet" href="projects.css" />
   <!-- external styling sheet added -->
 </head>
 
 <body>
+  <!-- Main Header Section -->
   <header id="main-header" class="header">
     <div class="header-content">
       <div class="brand-content">
-        <img src="/imgs/Signature.webp" alt="Kuro" height="70" width="70" />
+        <img src="/imgs/Signature.webp" alt="The Blank Canvas Logo" height="70" width="70" />
         <h1>The Blank Canvas</h1>
       </div>
-      <nav>
-        <div class="menu-button" id="menuButton">
+      <nav aria-label="Main navigation">
+        <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="menu">
           <span></span>
           <span></span>
-        </div>
+        </button>
         <ul id="menu" class="menu">
-          <li><a href="">Home</a></li>
+          <li><a href="/" aria-current="page">Home</a></li>
           <li><a href="/pages/about.html">About</a></li>
           <li><a href="/pages/projects.html">Projects</a></li>
           <li><a href="/pages/contact.html">Contact</a></li>
@@ -31,90 +33,165 @@
     </div>
   </header>
 
-  <div class="sidebar">
-    <a href="#home" class="nav-item"><i class="icon"><img src="/imgs/Icons/home/icons8-home-cloud-310.png"
-          alt="home"></i></a>
-    <a href="/pages/about.html" class="nav-item"><i class="icon"><img src="/imgs/Icons/user/icons8-user-cloud-70.png"
-          alt="about me"></i></a>
-    <a href="/pages/projects.html" class="nav-item"><i class="icon"><img
-          src="/imgs/Icons/folder/icons8-folder-cloud-310.png" alt="projects"></i></a>
-    <a href="/pages/contact.html" class="nav-item"><i class="icon"><img
-          src="/imgs/Icons/contact/icons8-contact-cloud-70.png" alt="contact me"></i></a>
-  </div>
+  <!-- Side Navigation -->
+  <nav class="sidebar" aria-label="Quick navigation">
+    <a href="/" class="nav-item" aria-label="Home">
+      <i class="icon"><img src="/imgs/Icons/home/icons8-home-cloud-310.png" alt=""></i>
+    </a>
+    <a href="/pages/about.html" class="nav-item" aria-label="About">
+      <i class="icon"><img src="/imgs/Icons/user/icons8-user-cloud-70.png" alt=""></i>
+    </a>
+    <a href="/pages/projects.html" class="nav-item" aria-label="Projects" aria-current="page">
+      <i class="icon"><img src="/imgs/Icons/folder/icons8-folder-cloud-310.png" alt=""></i>
+    </a>
+    <a href="/pages/contact.html" class="nav-item" aria-label="Contact">
+      <i class="icon"><img src="/imgs/Icons/contact/icons8-contact-cloud-70.png" alt=""></i>
+    </a>
+  </nav>
 
+  <!-- Main Content -->
   <main>
-    <section class="photography">
-      <h2>Photography</h2>
+    <!-- Photography Portfolio Section -->
+    <section class="photography" aria-labelledby="photography-title">
+      <h2 id="photography-title">Photography</h2>
       <div class="photo-gallery">
-        <div class="item-card card_potraits">
-          <img src="/imgs/portraits/clock-tower.webp" alt="">
+        <div class="item-card">
+          <img src="/imgs/portraits/clock-tower.webp" alt="Clock Tower Portrait" loading="lazy">
+          <div class="card-overlay">
+            <h3>Clock Tower</h3>
+            <p>Portrait Photography</p>
+          </div>
         </div>
-        <div class="item-card card_landscapes">
-          <img src="/imgs/landscape/headshot3.webp" alt="">
+        <div class="item-card">
+          <img src="/imgs/landscape/headshot3.webp" alt="Mountain Landscape" loading="lazy">
+          <div class="card-overlay">
+            <h3>Mountain View</h3>
+            <p>Landscape Photography</p>
+          </div>
         </div>
-        <div class="item-card card_landscapes">
-          <img src="/imgs/landscape/mountains.webp" alt="">
+        <div class="item-card">
+          <img src="/imgs/landscape/mountains.webp" alt="Mountain Range" loading="lazy">
+          <div class="card-overlay">
+            <h3>Mountain Range</h3>
+            <p>Landscape Photography</p>
+          </div>
         </div>
-        <div class="item-card card_potraits">
-          <img src="/imgs/portraits/headshot5.jpg" alt="">
+        <div class="item-card">
+          <img src="/imgs/portraits/headshot5.jpg" alt="Portrait Photography" loading="lazy">
+          <div class="card-overlay">
+            <h3>Portrait Session</h3>
+            <p>Portrait Photography</p>
+          </div>
         </div>
-        <div class="item-card card_landscapes">
-          <img src="/imgs/landscape/lamp.webp" alt="">
+        <div class="item-card">
+          <img src="/imgs/landscape/lamp.webp" alt="Lamp Landscape" loading="lazy">
+          <div class="card-overlay">
+            <h3>Urban Night</h3>
+            <p>Landscape Photography</p>
+          </div>
         </div>
-        <div class="item-card card_potraits">
-          <img src="/imgs/portraits/headshot6.jpg" alt="">
+        <div class="item-card">
+          <img src="/imgs/portraits/headshot6.jpg" alt="Portrait Photography" loading="lazy">
+          <div class="card-overlay">
+            <h3>Portrait Session</h3>
+            <p>Portrait Photography</p>
+          </div>
         </div>
-        <div class="item-card card_landscapes">
-          <img src="/imgs/portraits/headshot7.jpg" alt="">
+        <div class="item-card">
+          <img src="/imgs/portraits/headshot7.jpg" alt="Landscape Photography" loading="lazy">
+          <div class="card-overlay">
+            <h3>Urban Scene</h3>
+            <p>Landscape Photography</p>
+          </div>
         </div>
-        <div class="item-card card_landscapes">
-          <img src="/imgs/landscape/storm.webp" alt="">
+        <div class="item-card">
+          <img src="/imgs/landscape/storm.webp" alt="Storm Landscape" loading="lazy">
+          <div class="card-overlay">
+            <h3>Storm Clouds</h3>
+            <p>Landscape Photography</p>
+          </div>
         </div>
-        <div class="item-card card_potraits">
-          <img src="/imgs/portraits/headshot8.jpg" alt="">
+        <div class="item-card">
+          <img src="/imgs/portraits/headshot8.jpg" alt="Portrait Photography" loading="lazy">
+          <div class="card-overlay">
+            <h3>Portrait Session</h3>
+            <p>Portrait Photography</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="cinematography">
-      <h2>Cinematography</h2>
-      <div class="photo-gallery">
-        <video src="/vids/room.mp4" width="500" height="500" controls autoplay loop>
-          <p>footage of my room</p>
+    <!-- Cinematography Section -->
+    <section class="cinematography" aria-labelledby="cinematography-title">
+      <h2 id="cinematography-title">Cinematography</h2>
+      <div class="video-container">
+        <video src="/vids/room.mp4" width="500" height="500" controls autoplay loop preload="metadata"
+          aria-label="Room footage">
+          <p>Your browser doesn't support HTML5 video. Here's a <a href="/vids/room.mp4">link to the video</a> instead.
+          </p>
         </video>
+        <div class="video-description">
+          <h3>Room Ambience</h3>
+          <p>A cinematic exploration of space and light</p>
+        </div>
       </div>
-
     </section>
 
-    <section id="headshots" class="container">
-      <div class="picture-card">
-        <img src="/imgs/portraits/headshot4.webp" alt="">
+    <!-- Headshots Gallery Section -->
+    <section id="headshots">
+      <div class="headshots-gallery">
+        <div class="picture-card">
+          <img src="/imgs/portraits/headshot4.webp" alt="Professional headshot" loading="lazy">
+          <div class="card-overlay">
+            <h3>Professional Portrait</h3>
+            <p>Corporate Headshot</p>
+          </div>
+        </div>
+        <div class="picture-card">
+          <img src="/imgs/portraits/headshot2.webp" alt="Professional headshot" loading="lazy">
+          <div class="card-overlay">
+            <h3>Professional Portrait</h3>
+            <p>Corporate Headshot</p>
+          </div>
+        </div>
+        <div class="picture-card">
+          <img src="/imgs/portraits/headshot1.webp" alt="Professional headshot" loading="lazy">
+          <div class="card-overlay">
+            <h3>Professional Portrait</h3>
+            <p>Corporate Headshot</p>
+          </div>
+        </div>
+        <div class="picture-card">
+          <img src="/imgs/portraits/headshot3.webp" alt="Professional headshot" loading="lazy">
+          <div class="card-overlay">
+            <h3>Professional Portrait</h3>
+            <p>Corporate Headshot</p>
+          </div>
+        </div>
       </div>
-      <div class="picture-card">
-        <img src="/imgs/portraits/headshot2.webp" alt="">
-      </div>
-      <div class="picture-card">
-        <img src="/imgs/portraits/headshot1.webp" alt="">
-      </div>
-      <div class="picture-card">
-        <img src="/imgs/portraits/headshot3.webp" alt="">
-      </div>
-
     </section>
   </main>
 
+  <!-- Footer Section -->
   <footer>
     <div class="connect">
       <h2>Follow</h2>
-      <a href="https://github.com/__calcifar__"><img class="icon-link" src="/imgs/Icons/git.webp" alt="Github link"></a>
-      <a href="https://www.instagram.com/__calcifar__/"><img class="icon-link" src="/imgs/Icons/linkedin.webp"
-          alt="Linkedin link"></a>
-      <a href="https://www.instagram.com/__calcifar__/"><img class="icon-link" src="/imgs/Icons/instagram.webp"
-          alt="Instagram link"></a>
+      <div class="social-links">
+        <a href="https://github.com/__calcifar__" aria-label="Visit our GitHub profile">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/__calcifar__/" aria-label="Visit our LinkedIn profile">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/__calcifar__/" aria-label="Visit our Instagram profile">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
     </div>
-    <p>@2024 The Blank Canvas</p>
+    <p>&copy; 2024 The Blank Canvas. All rights reserved.</p>
   </footer>
   <script src="/index.js"></script>
+  <script src="projects.js"></script>
 </body>
 
 </html>

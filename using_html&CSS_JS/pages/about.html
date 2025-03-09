@@ -4,26 +4,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About</title>
-  <link rel="stylesheet" href="/style.css" />
-  <!-- external styling sheet added -->
+  <meta name="description" content="Learn more about The Blank Canvas photography and cinematography" />
+  <title>About | The Blank Canvas</title>
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 
 <body>
   <header id="main-header" class="header">
     <div class="header-content">
       <div class="brand-content">
-        <img src="/imgs/Signature.webp" alt="Kuro" height="70" width="70" />
+        <img src="/imgs/Signature.webp" alt="The Blank Canvas Logo" height="70" width="70" />
         <h1>The Blank Canvas</h1>
       </div>
-      <nav>
-        <div class="menu-button" id="menuButton">
+      <nav aria-label="Main navigation">
+        <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="menu">
           <span></span>
           <span></span>
-        </div>
+        </button>
         <ul id="menu" class="menu">
           <li><a href="/">Home</a></li>
-          <li><a href="/pages/about.html">About</a></li>
+          <li><a href="/pages/about.html" aria-current="page">About</a></li>
           <li><a href="/pages/projects.html">Projects</a></li>
           <li><a href="/pages/contact.html">Contact</a></li>
         </ul>
@@ -31,30 +32,136 @@
     </div>
   </header>
 
-  <div class="sidebar">
-    <a href="#home" class="nav-item"><i class="icon"><img src="/imgs/Icons/home/icons8-home-cloud-310.png"
-          alt="home"></i></a>
-    <a href="/pages/about.html" class="nav-item"><i class="icon"><img src="/imgs/Icons/user/icons8-user-cloud-70.png"
-          alt="about me"></i></a>
-    <a href="/pages/projects.html" class="nav-item"><i class="icon"><img
-          src="/imgs/Icons/folder/icons8-folder-cloud-310.png" alt="projects"></i></a>
-    <a href="/pages/contact.html" class="nav-item"><i class="icon"><img
-          src="/imgs/Icons/contact/icons8-contact-cloud-70.png" alt="contact me"></i></a>
-  </div>
+  <nav class="sidebar" aria-label="Quick navigation">
+    <a href="/" class="nav-item" aria-label="Home">
+      <i class="icon"><img src="/imgs/Icons/home/icons8-home-cloud-310.png" alt=""></i>
+    </a>
+    <a href="/pages/about.html" class="nav-item" aria-label="About" aria-current="page">
+      <i class="icon"><img src="/imgs/Icons/user/icons8-user-cloud-70.png" alt=""></i>
+    </a>
+    <a href="/pages/projects.html" class="nav-item" aria-label="Projects">
+      <i class="icon"><img src="/imgs/Icons/folder/icons8-folder-cloud-310.png" alt=""></i>
+    </a>
+    <a href="/pages/contact.html" class="nav-item" aria-label="Contact">
+      <i class="icon"><img src="/imgs/Icons/contact/icons8-contact-cloud-70.png" alt=""></i>
+    </a>
+  </nav>
 
-  <main></main>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Capturing Moments, Creating Stories</h1>
+        <p>Professional photographer and cinematographer based in London</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>With over 5 years of experience in photography and cinematography, I specialize in capturing authentic
+            moments and creating compelling visual narratives. My work spans across portrait photography, landscape
+            photography, and cinematic storytelling.</p>
+          <p>Every project is an opportunity to create something unique, whether it's a intimate portrait session or a
+            dramatic landscape capture. I believe in the power of visual storytelling to connect, inspire, and move
+            people.</p>
+        </div>
+        <div class="profile-image">
+          <img src="/imgs/portraits/headshot1.webp" alt="Profile photo" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+      <h2>Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fas fa-camera"></i>
+          <h3>Photography</h3>
+          <ul>
+            <li>Portrait Photography</li>
+            <li>Landscape Photography</li>
+            <li>Event Coverage</li>
+            <li>Studio Sessions</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-video"></i>
+          <h3>Cinematography</h3>
+          <ul>
+            <li>Short Films</li>
+            <li>Music Videos</li>
+            <li>Commercial Content</li>
+            <li>Documentary Style</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-edit"></i>
+          <h3>Post-Production</h3>
+          <ul>
+            <li>Color Grading</li>
+            <li>Photo Retouching</li>
+            <li>Video Editing</li>
+            <li>Visual Effects</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipment Section -->
+    <section class="equipment-section">
+      <h2>Equipment</h2>
+      <div class="equipment-grid">
+        <div class="equipment-card">
+          <h3>Cameras</h3>
+          <ul>
+            <li>Sony A7 III</li>
+            <li>Canon EOS R5</li>
+            <li>DJI Pocket 2</li>
+          </ul>
+        </div>
+        <div class="equipment-card">
+          <h3>Lenses</h3>
+          <ul>
+            <li>24-70mm f/2.8</li>
+            <li>70-200mm f/2.8</li>
+            <li>35mm f/1.4</li>
+            <li>85mm f/1.8</li>
+          </ul>
+        </div>
+        <div class="equipment-card">
+          <h3>Accessories</h3>
+          <ul>
+            <li>DJI RS 2 Gimbal</li>
+            <li>Profoto B10 Lights</li>
+            <li>Rode Wireless GO</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="connect">
       <h2>Follow</h2>
-      <a href="https://github.com/__calcifar__"><img class="icon-link" src="/imgs/Icons/git.webp" alt="Github link"></a>
-      <a href="https://www.instagram.com/__calcifar__/"><img class="icon-link" src="/imgs/Icons/linkedin.webp"
-          alt="Linkedin link"></a>
-      <a href="https://www.instagram.com/__calcifar__/"><img class="icon-link" src="/imgs/Icons/instagram.webp"
-          alt="Instagram link"></a>
+      <div class="social-links">
+        <a href="https://github.com/__calcifar__" aria-label="Visit our GitHub profile">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/__calcifar__/" aria-label="Visit our LinkedIn profile">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/__calcifar__/" aria-label="Visit our Instagram profile">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
     </div>
-    <p>@2024 The Blank Canvas</p>
+    <p>&copy; 2024 The Blank Canvas. All rights reserved.</p>
   </footer>
+
   <script src="/index.js"></script>
 </body>
 

@@ -2,89 +2,328 @@
 @import '../shared.css';
 
 /*=============================================
+=            Variables            =
+=============================================*/
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #2c3e50;
+    --bg-color: #f5f6fa;
+    --card-bg: ;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: 0.3s ease;
+    --border-radius: 15px;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+}
+
+/*=============================================
+=            Base Styles            =
+=============================================*/
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/*=============================================
+=            Common Card Styles            =
+=============================================*/
+.item-card,
+.picture-card {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background: var(--card-bg);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.item-card:hover,
+.picture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.item-card img,
+.picture-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: fill;
+    transition: transform var(--transition);
+}
+
+/* Specific styles for headshot cards */
+.picture-card {
+    aspect-ratio: 3/4;
+}
+
+.picture-card img {
+    height: 100%;
+}
+
+/*=============================================
 =            Section Styles            =
 =============================================*/
 section {
-    padding: 4em 0;
-    margin: 2em 0;
-}
-
-/* Main gallery container with masonry layout */
-.photo-gallery {
-    width: 90%;
-    margin: auto;
-    columns: 4;
-    column-gap: 1em;
-}
-
-/* Individual photo card container */
-.item-card {
+    padding: var(--spacing-lg) 0;
+    margin: 0 auto;
+    position: relative;
+    max-width: 90vw;
     width: 100%;
-    margin-bottom: 1em;
 }
 
-/* Photo styling with hover effects */
+section h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+}
+
+/*=============================================
+=            Gallery Styles            =
+=============================================*/
+.photo-gallery {
+    columns: 4;
+    column-gap: 10px;
+    padding: 0 var(--spacing-md);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.headshots-gallery {
+    columns: 4;
+    column-gap: var(--spacing-sm);
+    padding: 0 var(--spacing-md);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Photography card styles */
+.item-card {
+    break-inside: avoid;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background: var(--card-bg);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
 .item-card img {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    height: auto;
+    display: block;
+    transition: transform var(--transition);
 }
 
-/* Hover effect for photos */
-.item-card img:hover {
-    transform: scale(1.1);
+/*=============================================
+=            Card Overlay            =
+=============================================*/
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-md);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    transform: translateY(100%);
+    transition: transform var(--transition);
 }
 
-/* Responsive adjustments for mobile devices */
-@media (max-width: 800px) {
-    .photo-gallery {
-        columns: 2;
-        /* Reduce to 2 columns on mobile */
-    }
+.item-card:hover .card-overlay,
+.picture-card:hover .card-overlay {
+    transform: translateY(0);
 }
 
-/*=====  End of Photography Gallery  ======*/
+.card-overlay h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+}
 
+.card-overlay p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/*=============================================
+=            Video Container            =
+=============================================*/
+.video-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    background: var(--card-bg);
+}
+
+.video-description {
+    text-align: center;
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+}
+
+.video-description h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.video-description p {
+    color: var(--text-color);
+    opacity: 0.8;
+}
 
 /*=============================================
 =            Headshots Section            =
 =============================================*/
-
-/* Main headshots container */
 #headshots {
-    background-color: #35323270;
-    padding: 1em 1em;
-    width: 90%;
-    height: auto;
-    margin: auto;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    columns: 4;
-    column-gap: 1em;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    max-width: 100vw;
 }
 
-/* Individual headshot card styling */
-.picture-card {
-    margin-bottom: 1em;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/*=============================================
+=            Footer Styles            =
+=============================================*/
+footer {
+    background: var(--primary-color);
+    color: white;
+    padding: var(--spacing-lg) var(--spacing-md);
+    text-align: center;
 }
 
-/* Headshot image styling */
-.picture-card img {
-    display: block;
-    width: 100%;
-    height: auto;
+.connect {
+    margin-bottom: var(--spacing-md);
 }
 
-/* Responsive adjustments for mobile devices */
-@media (max-width: 800px) {
-    #headshots {
-        columns: 1;
-        /* Single column layout on mobile */
+.connect h2 {
+    color: white;
+    margin-bottom: var(--spacing-sm);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+/*=============================================
+=            Responsive Design            =
+=============================================*/
+@media (max-width: 1200px) {
+    .photo-gallery {
+        columns: 3;
+    }
+
+    .headshots-gallery {
+        columns: 2;
     }
 }
 
-/*=====  End of Headshots Section  ======*/
+@media (max-width: 768px) {
+    :root {
+        --spacing-lg: 3rem;
+        --spacing-md: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .photo-gallery {
+        columns: 2;
+    }
+
+    .headshots-gallery {
+        columns: 2;
+    }
+
+    .card-overlay {
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --spacing-lg: 2rem;
+        --spacing-md: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.75rem;
+    }
+
+    .photo-gallery {
+        columns: 1;
+    }
+
+    .headshots-gallery {
+        columns: 1;
+    }
+
+    .social-links {
+        gap: var(--spacing-sm);
+    }
+
+    .social-links a {
+        font-size: 1.25rem;
+    }
+}
+
+/*=============================================
+=            Utility Classes            =
+=============================================*/
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.picture-card {
+    break-inside: avoid;
+    margin-bottom: var(--spacing-sm);
+}
