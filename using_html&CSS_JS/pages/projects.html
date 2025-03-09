@@ -124,15 +124,27 @@
     <!-- Cinematography Section -->
     <section class="cinematography" aria-labelledby="cinematography-title">
       <h2 id="cinematography-title">Cinematography</h2>
-      <div class="video-container">
-        <video src="/vids/room.mp4" width="500" height="500" controls autoplay loop preload="metadata"
-          aria-label="Room footage">
-          <p>Your browser doesn't support HTML5 video. Here's a <a href="/vids/room.mp4">link to the video</a> instead.
-          </p>
-        </video>
-        <div class="video-description">
-          <h3>Room Ambience</h3>
-          <p>A cinematic exploration of space and light</p>
+      <div class="video-gallery">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/HAZwkR0aPyc?si=pMFbZ2CZe53JxasA" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+          <div class="video-description">
+            <h3>Cinematic Exploration</h3>
+            <p>A journey through visual storytelling</p>
+          </div>
+        </div>
+        <div class="video-container">
+          <video src="/vids/room.mp4" controls autoplay loop preload="metadata" aria-label="Room footage">
+            <p>Your browser doesn't support HTML5 video. Here's a <a href="/vids/room.mp4">link to the video</a>
+              instead.</p>
+          </video>
+          <div class="video-description">
+            <h3>Room Ambience</h3>
+            <p>A cinematic exploration of space and light</p>
+          </div>
         </div>
       </div>
     </section>
