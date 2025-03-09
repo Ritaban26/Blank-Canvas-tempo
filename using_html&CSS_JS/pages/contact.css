@@ -79,8 +79,9 @@
         textarea {
             width: 100%;
             padding: 0.8em;
-            border: 2px solid transparent;
-            border-radius: 8px;
+            border: none;
+            border-bottom: 2px solid var(--secondary);
+            border-radius: 0;
             background: rgba(255, 255, 255, 0.1);
             color: var(--text);
             transition: all 0.3s ease;
@@ -88,7 +89,7 @@
 
             &:focus {
                 outline: none;
-                border-color: var(--secondary);
+                border-bottom-color: var(--secondary);
                 background: rgba(255, 255, 255, 0.15);
             }
 
