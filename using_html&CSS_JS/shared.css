@@ -18,6 +18,9 @@
     /* Semi-transparent sidebar background */
     --transition: 0.3s ease;
     /* Standard transition timing */
+    --spacing-lg: 16px;
+    --spacing-md: 10px;
+    --spacing-sm: 5px;
 }
 
 /*=============================================

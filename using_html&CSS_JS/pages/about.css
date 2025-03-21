@@ -40,7 +40,7 @@
 .about-section {
     padding: var(--spacing-lg) var(--spacing-md);
     max-width: 1200px;
-    margin: 0 auto;
+    margin: var(--spacing-md) auto;
 }
 
 .about-content {
