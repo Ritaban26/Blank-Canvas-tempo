@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (videoType === "room") {
         // Switch to room video in spotlight
         videoSpotlight.querySelector(".featured-video").innerHTML = `
-                    <video src="/vids/room.mp4" controls autoplay preload="metadata" aria-label="Room footage">
+                    <video src="/vids/room.mp4" controls autoplay preload="metadata" aria-label="Room footage" loading="lazy">
                         <p>Your browser doesn't support HTML5 video.</p>
                     </video>
                     <div class="video-description">
