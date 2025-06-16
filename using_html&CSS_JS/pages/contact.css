@@ -26,7 +26,7 @@
         h2 {
             font-size: 2.5em;
             margin-bottom: 1em;
-            color: var(--secondary);
+            color: var(--text);
             position: relative;
 
             &::after {
@@ -71,7 +71,7 @@
 
         label {
             font-weight: 500;
-            color: var(--secondary);
+            color: var(--text);
             margin-bottom: 0.5em;
         }
 
@@ -106,7 +106,7 @@
         /* Submit button styling */
         .button {
             background-color: var(--secondary);
-            color: var(--primary);
+            color: var(--text);
             padding: 1em 2em;
             border: none;
             border-radius: 8px;

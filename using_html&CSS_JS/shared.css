@@ -6,11 +6,11 @@
 =============================================*/
 :root {
     /* Color scheme */
-    --primary: #f4f4f4;
+    --primary: #f4FAF6E9;
     /* Light background color */
-    --secondary: #333;
+    --secondary: #A9CEF4;
     /* Dark text color */
-    --text: #444;
+    --text: #111111;
     /* Medium text color */
 
     /* Component specific variables */
@@ -53,7 +53,7 @@ p {
 =============================================*/
 /* Main header container */
 #main-header {
-    color: var(--secondary);
+    color: var(--text);
     padding: 2em 6em;
 }
 
@@ -86,37 +86,49 @@ nav {
 .menu-button {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     cursor: pointer;
-    gap: 5px;
+    gap: 6px;
     position: relative;
     z-index: 1000;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
-    padding: 10px;
+    padding: 12px;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all var(--transition);
+    width: 44px;
+    height: 44px;
 }
 
 .menu-button:hover {
     background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
 }
 
 /* Hamburger menu lines */
 .menu-button span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--secondary);
-    border-radius: 3px;
-    transition: all var(--transition);
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--text);
+    border-radius: 4px;
+    transition: transform var(--transition),
+        opacity var(--transition),
+        background-color var(--transition);
+    transform-origin: center;
+}
+
+.menu-button.active {
+    gap: 0;
 }
 
 .menu-button.active span:first-child {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(2px) rotate(45deg);
 }
 
 .menu-button.active span:last-child {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-2px) rotate(-45deg);
 }
 
 /* Dropdown menu */
@@ -124,12 +136,12 @@ nav {
     display: none;
     list-style: none;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.9);
+    background: var(--secondary);
     backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 50vh;
     width: 300px;
     padding: 80px 40px;
     z-index: 999;
@@ -137,6 +149,7 @@ nav {
     transition: all var(--transition);
     opacity: 0;
     visibility: hidden;
+    border-radius: 1em;
 }
 
 /* Menu links */
@@ -146,7 +159,7 @@ nav {
 
 .menu li a {
     text-decoration: none;
-    color: var(--primary);
+    color: var(--text);
     font-size: 1.2rem;
     position: relative;
     padding: 5px 0;
@@ -168,7 +181,7 @@ nav {
 }
 
 .menu li a[aria-current="page"] {
-    color: #3498db;
+    color: var(--primary);
 }
 
 /* Active menu state */

@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: var(--primary);
     margin-bottom: calc(var(--spacing-lg) * 2);
 }
 
@@ -38,7 +38,7 @@
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    
+
     .hero-content p {
         font-size: 1.2rem;
     }
@@ -49,11 +49,11 @@
         height: 50vh;
         background-attachment: scroll;
     }
-    
+
     .hero-content h1 {
         font-size: 2rem;
     }
-    
+
     .hero-content p {
         font-size: 1rem;
     }
@@ -79,12 +79,12 @@
     .about-content {
         grid-template-columns: 1fr;
     }
-    
+
     .about-text {
         padding-right: 0;
         order: 2;
     }
-    
+
     .profile-image {
         order: 1;
         margin-bottom: var(--spacing-md);
@@ -195,6 +195,7 @@
 =            Responsive Grids            =
 =============================================*/
 @media (max-width: 992px) {
+
     .skills-grid,
     .equipment-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -202,11 +203,12 @@
 }
 
 @media (max-width: 576px) {
+
     .skills-grid,
     .equipment-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .skill-card,
     .equipment-card {
         margin-bottom: var(--spacing-md);
@@ -219,7 +221,7 @@
 .equipment-section {
     padding: var(--spacing-lg) var(--spacing-md);
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
+    color: var(--text);
 }
 
 .equipment-section h2 {
@@ -242,6 +244,7 @@
     border-radius: var(--border-radius);
     backdrop-filter: blur(10px);
     transition: transform var(--transition);
+    text-align: center;
     height: 100%;
 }
 
@@ -252,7 +255,6 @@
 .equipment-card h3 {
     font-size: 1.5rem;
     margin-bottom: var(--spacing-md);
-    color: white;
 }
 
 .equipment-card ul {
@@ -263,7 +265,6 @@
 
 .equipment-card li {
     margin: var(--spacing-sm) 0;
-    color: rgba(255, 255, 255, 0.9);
 }
 
 /*=============================================

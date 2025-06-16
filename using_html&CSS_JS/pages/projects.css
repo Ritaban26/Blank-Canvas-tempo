@@ -8,8 +8,8 @@
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
     --accent-color: #e74c3c;
-    --text-color: #2c3e50;
-    --bg-color: #f5f6fa;
+    --text-color: #111111;
+    --bg-color: #d9e0e0;
     --card-bg: ;
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -102,7 +102,7 @@ section h2::after {
 =============================================*/
 .photo-gallery {
     columns: 4;
-    column-gap: 10px;
+    /* column-gap: 10px; */
     padding: 0 var(--spacing-md);
     max-width: 1400px;
     margin: 0 auto;
