@@ -97,7 +97,7 @@
 
 .about-text h2 {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--text);
     margin-bottom: var(--spacing-md);
 }
 
@@ -136,13 +136,12 @@
 =============================================*/
 .skills-section {
     padding: var(--spacing-lg) var(--spacing-md);
-    background-color: var(--bg-color);
 }
 
 .skills-section h2 {
     text-align: center;
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--text);
     margin-bottom: var(--spacing-lg);
 }
 
@@ -175,7 +174,7 @@
 }
 
 .skill-card h3 {
-    color: var(--primary-color);
+    color: var(--text);
     margin-bottom: var(--spacing-sm);
     font-size: 1.5rem;
 }
@@ -220,7 +219,6 @@
 =============================================*/
 .equipment-section {
     padding: var(--spacing-lg) var(--spacing-md);
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--text);
 }
 
