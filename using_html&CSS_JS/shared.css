@@ -7,10 +7,16 @@
 :root {
     /* Color scheme */
     --primary: #f4FAF6E9;
+    --primary-color: #f4FAF6E9;
     /* Light background color */
     --secondary: #A9CEF4;
+    --secondary-color: #A9CEF4;
+    /* Dark accent color */
+    --accent: #122C4F;
+    --accent-color: #122C4F;
     /* Dark text color */
     --text: #111111;
+    --text-color: #111111;
     /* Medium text color */
 
     /* Component specific variables */
@@ -21,6 +27,8 @@
     --spacing-lg: 16px;
     --spacing-md: 10px;
     --spacing-sm: 5px;
+    /* Spacing variables for consistent margins and paddings */
+    --border-radius: 1em;
 }
 
 /*=============================================
