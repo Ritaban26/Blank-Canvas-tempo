@@ -134,7 +134,9 @@ nav {
     padding: 80px 40px;
     z-index: 999;
     transform: translateX(100%);
-    transition: transform var(--transition);
+    transition: all var(--transition);
+    opacity: 0;
+    visibility: hidden;
 }
 
 /* Menu links */
@@ -173,6 +175,8 @@ nav {
 .menu.active {
     display: flex;
     transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Overlay when menu is active */
