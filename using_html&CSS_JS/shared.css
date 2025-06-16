@@ -88,6 +88,14 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+}
+
+/* Menu container */
+nav:hover .menu {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Hamburger menu button */
@@ -141,23 +149,23 @@ nav {
 
 /* Dropdown menu */
 .menu {
-    display: none;
+    display: flex;
     list-style: none;
     flex-direction: column;
     background: var(--secondary);
     backdrop-filter: blur(10px);
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 100%;
     right: 0;
-    height: 50vh;
-    width: 300px;
-    padding: 80px 40px;
+    min-width: 200px;
+    padding: 1rem;
     z-index: 999;
-    transform: translateX(100%);
+    transform: translateY(10px);
     transition: all var(--transition);
     opacity: 0;
     visibility: hidden;
-    border-radius: 1em;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Menu links */
